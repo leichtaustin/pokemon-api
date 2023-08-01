@@ -1,3 +1,5 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+
 const baseURL = 'https://pokeapi.co/api/v2/pokemon/';
 
 export const getPokemonData = async (pokemon) => {

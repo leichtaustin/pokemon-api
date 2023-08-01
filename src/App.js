@@ -3,6 +3,8 @@ import './App.css';
 import { getPokemonData } from './components/api/api';
 import React, {useState} from 'react';
 
+import { SearchTerm } from './components/searchTerm/searchTerm';
+
 function App() {
   
   const [currentPokemon, setCurrentPokemon] = useState({})
@@ -28,7 +30,8 @@ function App() {
   
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
+      <SearchTerm />
+      {/* <form onSubmit={handleSubmit}>
         <label for='pokeSearch'>Pokemon to Search: </label>
         <input type='text' id='pokeSearch' />
         <button type='submit'>Fetch Pokemon Data from query</button>
@@ -36,9 +39,8 @@ function App() {
       <button onClick={fetchPokemonData}>Get Pokemon Data</button>
       <div className='PokemonData'>
         <p>Pokemon: {currentPokemon.name}</p>
-        {/* <p>Moves: {currentPokemon.stats.base_stat}</p> */}
-        <p>Weight: {currentPokemon.weight}</p>
-      </div>
+        {/* <p>Moves: {currentPokemon.stats.base_stat}</p> 
+      </div> */}
     </div>
   );
 }
