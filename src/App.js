@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 
 import { SearchTerm } from './components/searchTerm/searchTerm';
 import { QueryPokemon } from './components/queryPokemon/queryPokemon';
+import { TeamList } from './components/teamList/teamList';
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
       <SearchTerm />
       <QueryPokemon />
+      <TeamList />
       {/* <form onSubmit={handleSubmit}>
         <label for='pokeSearch'>Pokemon to Search: </label>
         <input type='text' id='pokeSearch' />

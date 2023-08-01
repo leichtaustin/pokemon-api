@@ -34,11 +34,7 @@ export const queryPokemonSlice = createSlice({
             state.hasError = false;
         },
         [fetchPokemonData.fulfilled]: (state, action) => {
-            state.pokemon = {
-                ...state,
-                name: action.payload.name,
-                weight: action.payload.weight
-            };
+            state.pokemon = action.payload;
             state.isLoading = false;
             state.hasError = false;
         },
