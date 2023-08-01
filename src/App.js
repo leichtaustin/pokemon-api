@@ -4,6 +4,7 @@ import { getPokemonData } from './components/api/api';
 import React, {useState} from 'react';
 
 import { SearchTerm } from './components/searchTerm/searchTerm';
+import { QueryPokemon } from './components/queryPokemon/queryPokemon';
 
 function App() {
   
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <SearchTerm />
+      <QueryPokemon />
       {/* <form onSubmit={handleSubmit}>
         <label for='pokeSearch'>Pokemon to Search: </label>
         <input type='text' id='pokeSearch' />
